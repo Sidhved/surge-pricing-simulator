@@ -4,8 +4,30 @@
 ![Streamlit](https://img.shields.io/badge/streamlit-1.24.0-red.svg)
 ![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.2.2-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://surge-pricing-simulator.streamlit.app/)
 
 A machine learning-powered surge pricing simulator that emulates dynamic pricing systems used by ride-sharing services. Built with Streamlit and Python, this application provides real-time price adjustments based on various factors including time of day, demand patterns, and trip characteristics.
+
+## 🌍 Live Demo
+
+Try the live application here: [Surge Pricing Simulator](https://surge-pricing-simulator.streamlit.app/)
+
+### Quick Start Guide
+1. Select a date range in 2022 to analyze historical patterns
+2. Click "Load Data" to fetch and process taxi trip data
+3. Explore the generated visualizations:
+   - Hourly demand patterns
+   - Daily demand variations
+   - Fare distribution analysis
+4. In the simulation section, adjust parameters:
+   - Hour of day (0-23)
+   - Day of week
+   - Number of passengers (1-6)
+   - Trip distance
+5. Click "Simulate" to see the dynamic pricing results:
+   - Surge multiplier (1.0x - 3.0x)
+   - Base fare
+   - Final surge price
 
 ## 🌟 Features
 
@@ -36,7 +58,7 @@ A machine learning-powered surge pricing simulator that emulates dynamic pricing
 ## 🛠️ Technology Stack
 
 ### Core Technologies
-- **Python 3.12+**: Core programming language
+- **Python 3.9+**: Core programming language
 - **Streamlit**: Web application framework
 - **Pandas**: Data manipulation and analysis
 - **Scikit-learn**: Machine learning implementation
@@ -50,7 +72,6 @@ surge-pricing-simulator/
 │   ├── app/                  # Streamlit application
 │   │   ├── __init__.py
 │   │   └── main.py          # Main application file
-│   │   └── run_data_pipeline.py          
 │   ├── data/                 # Data handling
 │   │   ├── __init__.py
 │   │   └── data_loader.py   # Data loading and processing
@@ -92,7 +113,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running the Application
+### Running Locally
 
 1. Start the Streamlit app
 ```bash
@@ -100,35 +121,6 @@ streamlit run src/app/main.py
 ```
 
 2. Open your browser and navigate to `http://localhost:8501`
-
-## 💡 Usage Guide
-
-### Data Loading
-1. Select your desired date range (default: January 2022)
-2. Click "Load Data" to fetch and process taxi trip data
-3. View the generated visualizations and statistics
-
-### Surge Price Simulation
-1. Adjust simulation parameters:
-   - Hour of day (0-23)
-   - Day of week
-   - Number of passengers (1-6)
-   - Trip distance (miles)
-2. Click "Simulate" to calculate surge pricing
-3. View the resulting:
-   - Surge multiplier
-   - Base fare
-   - Final surge price
-
-### Visualization Features
-- Average hourly demand patterns
-- Daily demand variations
-- Fare distribution histogram
-- Key metrics dashboard including:
-  - Average fare
-  - Median fare
-  - Average trip distance
-  - Total trips analyzed
 
 ## 🧪 Algorithm Details
 
@@ -157,18 +149,6 @@ The surge multiplier is calculated based on:
 - Dynamic multiplier adjustments
 - Bounded output (1.0x - 3.0x range)
 
-## 🚢 Deployment
-
-### Streamlit Cloud
-1. Fork this repository
-2. Connect to [Streamlit Cloud](https://streamlit.io/cloud)
-3. Deploy directly from GitHub
-
-### Local Deployment
-```bash
-streamlit run src/app/main.py
-```
-
 ## 📈 Future Improvements
 
 - [ ] Weather data integration
@@ -180,19 +160,29 @@ streamlit run src/app/main.py
 - [ ] Performance optimizations
 - [ ] Real-time data updates
 
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🙏 Acknowledgments
+
+- [NYC Taxi & Limousine Commission](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) for providing the dataset
+- [Streamlit](https://streamlit.io/) team for the amazing framework
+- [Scikit-learn](https://scikit-learn.org/) for machine learning tools
+- [Plotly](https://plotly.com/) for visualization capabilities
 
 ## 📬 Contact
 
 Your Name - [sidhved.warik@gmail.com](mailto:sidhved.warik@gmail.com)
 
-Project Link: [https://github.com/Sidhved/surge-pricing-simulator](https://github.com/Sidhved/surge-pricing-simulator)
-
-## 🙏 Acknowledgments
-
-- NYC Taxi & Limousine Commission for providing the dataset
-- Streamlit team for the amazing framework
-- [Scikit-learn](https://scikit-learn.org/) for machine learning tools
-- [Plotly](https://plotly.com/) for visualization capabilities
+Project Links: 
+- Live Demo: [https://surge-pricing-simulator.streamlit.app/](https://surge-pricing-simulator.streamlit.app/)
+- GitHub: [https://github.com/Sidhved/surge-pricing-simulator](https://github.com/Sidhved/surge-pricing-simulator)
